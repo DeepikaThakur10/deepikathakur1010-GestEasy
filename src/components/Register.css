@@ -1,0 +1,170 @@
+/* Register page styling */
+.register-container {
+  font-family: Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  box-sizing: border-box;
+}
+
+/* Navbar styling */
+.navbar {
+  background-color: #00fef1; /* Set navbar background color */
+  padding: 15px 20px; /* Reduce padding to fit logo and links */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+  box-sizing: border-box;
+}
+
+.navbar h2 {
+  margin: 0;
+  font-size: 22px; /* Reduce font size of the logo */
+}
+
+.nav-links {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 15px; /* Adjust space between links */
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: white;
+  font-size: 16px;
+  transition: color 0.3s ease;
+}
+
+.nav-links li a:hover {
+  color: #ff8c00; /* Hover color */
+}
+
+/* Main content */
+.register-main-content {
+  display: flex;
+  justify-content: space-between;
+  flex: 1;
+  padding: 20px;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.register-left-section {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.default-register-image {
+  width: 60%; /* Reduce image size */
+  max-width: 350px; /* Set max width */
+  margin-top: 20px;
+  object-fit: contain;
+}
+
+.register-form-box {
+  flex: 1.3; /* Decrease the flex value slightly to reduce size */
+  background-color: #f7f7f7;
+  padding: 25px; /* Reduce padding slightly */
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow-y: auto; /* Allow scrolling if content overflows */
+  box-sizing: border-box;
+}
+
+.register-form-box h3 {
+  text-align: center;
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group input,
+.form-group select {
+  width: 100%;
+  padding: 12px; /* Increase padding for better readability */
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+  outline: none;
+  border-color: #00fef1;
+}
+
+.register-button {
+  width: 100%;
+  padding: 14px; /* Increase padding for button */
+  font-size: 16px;
+  background-color: #00fef1;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.register-button:hover {
+  background-color: #00b6d1;
+}
+
+.error-message,
+.success-message {
+  color: red;
+  text-align: center;
+  font-weight: bold;
+}
+
+.success-message {
+  color: green;
+}
+
+p {
+  text-align: center;
+}
+
+/* Footer styling */
+footer {
+  background-color: #f1f1f1;
+  text-align: center;
+  padding: 10px;
+  font-size: 14px;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+footer p {
+  margin: 0;
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 768px) {
+  .register-main-content {
+    flex-direction: column; /* Stack the sections vertically on smaller screens */
+  }
+
+  .register-left-section {
+    flex: none;
+    margin-bottom: 20px; /* Add space below the left section */
+  }
+
+  .default-register-image {
+    width: 80%; /* Make image larger on smaller screens */
+    max-width: 300px;
+  }
+
+  .register-form-box {
+    flex: none;
+    width: 100%; /* Ensure form takes full width on smaller screens */
+  }
+}
